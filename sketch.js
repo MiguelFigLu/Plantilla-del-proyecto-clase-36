@@ -27,7 +27,7 @@ function setup() {
   feed.mousePressed(feedDog);
 
   addFood=createButton("Agregar comida");
-  addFood.position(800,95);
+  addFood.position(1000,95);
   addFood.mousePressed(addFoods);
 
 }
@@ -44,11 +44,11 @@ function draw() {
   fill(255,255,254);
   textSize(15);
   if(lastFed>=12){
-    text("Última hora de comida : "+ lastFed%12 + " PM", 350,30);
+    text("Última hora de comida : "+ lastFed%12 + " PM", 200,30);
    }else if(lastFed==0){
-     text("Última hora de comida : 12 AM",350,30);
+     text("Última hora de comida : 12 AM",200,30);
    }else{
-     text("Última hora de comida : "+ lastFed + " AM", 350,30);
+     text("Última hora de comida : "+ lastFed + " AM", 200,30);
    }
  
   drawSprites();
