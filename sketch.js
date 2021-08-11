@@ -44,24 +44,24 @@ function draw() {
   fill(255,255,254);
   textSize(15);
   if(lastFed>=12){
-    text("Last Feed : "+ lastFed%12 + " PM", 350,30);
+    text("Última hora de comida : "+ lastFed%12 + " PM", 350,30);
    }else if(lastFed==0){
-     text("Last Feed : 12 AM",350,30);
+     text("Última hora de comida : 12 AM",350,30);
    }else{
-     text("Last Feed : "+ lastFed + " AM", 350,30);
+     text("Última hora de comida : "+ lastFed + " AM", 350,30);
    }
  
   drawSprites();
 }
 
-//function to read food Stock
+//función para leer la comida del almacén
 function readStock(data){
   foodS=data.val();
   foodObj.updateFoodStock(foodS);
 }
 
 
-//function to update food stock and last fed time
+//función para actualizar la comida del almacén y la última hora de comida
 function feedDog(){
   dog.addImage(happyDog);
   
@@ -78,7 +78,7 @@ function feedDog(){
   })
 }
 
-//function to add food in stock
+//función para agregar comida al almacén
 function addFoods(){
   foodS++;
   database.ref('/').update({
